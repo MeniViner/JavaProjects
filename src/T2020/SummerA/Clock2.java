@@ -1,3 +1,5 @@
+package T2020.SummerA;
+
 public class Clock2 {
     private int hour; //23
     private int min; //59
