@@ -14,14 +14,12 @@ public class Family12 {
     public double getTotalSum() {
         return totalSum;
     }
-    public void input(){
-        Scanner s = new Scanner(System.in);
-        int age = 0;
+
+    public void input(int age) {
         double sum = 100;
-        age = s.nextInt();
         if (age <= 3)
             sum += 20.5;
-        else if (age > 3 && age <12)
+        else if (age > 3 && age < 12)
             sum += 30;
         else
             sum += 40.5;
