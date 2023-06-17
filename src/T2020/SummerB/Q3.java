@@ -22,5 +22,6 @@ public class Q3 {
 
     public static void main(String[] args) {
         what(4, 3);
+        why(4, 3);
     }
 }
