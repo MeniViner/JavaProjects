@@ -2,42 +2,21 @@ package T2022.SummerB.s7;
 
 public class Main {
 
-//    public static void outStanding (SportUnion[] unions){
-//        for (int i = 0; i < unions.length; i++)
-//            if (unions[i].getUnionData().length >= 5) {
-//
-//                SportClub[] unionData = unions[i].getUnionData();
-//
-//                for (int j = 0; j < unionData.length; j++)
-//                    if (unionData[j].getCountOfPlayer() >= 50) {
-//                        System.out.println(unions[i].getUnionName());
-//                        break;
-//                    }
-//            }
-//
-//    }
+    public static void outStanding(SportUnion[] unions) {
+        for (int i = 0; i < unions.length; i++)
+            if (unions[i].getUnionData().length >= 5) {
 
-    public static void printOutstandingUnions(SportUnion[] unions) {
-        for (int i = 0; i < unions.length; i++) {
-            SportUnion union = unions[i];
-            SportClub[] unionData = union.getUnionData();
+                SportClub[] unionData = unions[i].getUnionData();
 
-            if (union.getNumberUnion() >= 5) {
-                boolean isOutstanding = true;
-
-                for (int j = 0; j < union.getNumberUnion(); j++) {
-                    if (unionData[j].getCountOfPlayer() < 50) {
-                        isOutstanding = false;
+                for (int j = i; j < unionData.length; j++)
+                    if (unionData[j].getCountOfPlayer() >= 50) {
+                        System.out.println(unions[i].getUnionName());
                         break;
                     }
-                }
-
-                if (isOutstanding) {
-                    System.out.println(union.getUnionName());
-                }
             }
-        }
+
     }
+
 
     public static void main(String[] args) {
         // Create an array of SportUnion objects
@@ -58,6 +37,6 @@ public class Main {
         unions[1] = new SportUnion("Union2", union2Data, 2);
 
         // Call the printOutstandingUnions method to print outstanding unions
-        printOutstandingUnions(unions);
+        outStanding(unions);
     }
 }
