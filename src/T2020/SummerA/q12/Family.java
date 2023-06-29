@@ -1,16 +1,15 @@
-package T2020.SummerA;
+package T2020.SummerA.q12;
 
-import java.util.Scanner;
-
-public class Family12 {
+public class Family {
     private String name;
     private int num;
     private double totalSum;
 
-    public Family12 (String name, int num, double totalSum){
+    public Family(String name, int num, double totalSum) {
         this.num = num;
         this.totalSum = 0;
     }
+
     public double getTotalSum() {
         return totalSum;
     }

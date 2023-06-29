@@ -1,12 +1,12 @@
-package T2020.SummerA;
+package T2020.SummerA.q7;
 
-public class Truck7 {
+public class Truck {
     private String truckId;
     private String driverName;
     private int numStorage;
     private boolean isFree;
 
-    public Truck7(String truckId, String driverName, int numStorage, boolean isFree) {
+    public Truck(String truckId, String driverName, int numStorage, boolean isFree) {
         this.truckId = truckId;
         this.driverName = driverName;
         this.numStorage = numStorage;

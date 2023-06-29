@@ -1,8 +1,8 @@
-package T2020.SummerA;
+package T2020.SummerA.q12;
 
 import java.util.Scanner;
 
-public class Main12 {
+public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         String family;
@@ -15,7 +15,7 @@ public class Main12 {
                 break;
             System.out.print("How many participants will you be? ");
             num = s.nextInt();
-            Family12 f = new Family12(family, num, 0);
+            Family f = new Family(family, num, 0);
             for (int i = 0; i < num; i++) {
                 System.out.print("How old are you? ");
                 age = s.nextInt();

@@ -1,7 +1,8 @@
-package T2020.SummerA;
+package T2020.SummerA.q2;
 
 import java.util.Scanner;
-public class Main2 {
+
+public class Main {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
@@ -11,8 +12,8 @@ public class Main2 {
         System.out.println("enter flight two:");
         int m2 = s.nextInt();
         int h2 = s.nextInt();
-        Clock2 t1 = new Clock2(h1,m1);
-        Clock2 t2 = new Clock2(h2,m2);
+        Clock t1 = new Clock(h1, m1);
+        Clock t2 = new Clock(h2, m2);
         int z1 = t1.getInterval();
         int z2 = t2.getInterval();
 

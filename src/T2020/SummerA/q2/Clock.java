@@ -1,13 +1,14 @@
-package T2020.SummerA;
+package T2020.SummerA.q2;
 
-public class Clock2 {
+public class Clock {
     private int hour; //23
     private int min; //59
 
-    public Clock2(int hour, int min) {
+    public Clock(int hour, int min) {
         this.hour = hour;
         this.min = min;
     }
+
     public int getHour() {
         return hour;
     }
