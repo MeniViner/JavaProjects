@@ -1,18 +1,32 @@
 package T2022.SummerB;
 
 public class q8 {
-    public static boolean special(String str) {
-        if (str == "")
-            return false;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) < 'a' && str.charAt(i) > 'z' || str.charAt(i) < 'A' && str.charAt(i) > 'Z')
-                return false;
-
+    public static int[] why(int[] arr) {
+        int[] temp = new int[arr.length];
+        temp[0] = arr[0];
+        int count = 1;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] != arr[i - 1]) {
+                temp[count] = arr[i];
+                count++;
+            }
         }
-        return true;
-    }
-
-    public static void main(String[] args) {
-
+        int[] res = new int[count];
+        for (int i = 0; i < count; i++)
+            res[i] = temp[i];
+        return res;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
