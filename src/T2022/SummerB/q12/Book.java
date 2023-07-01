@@ -7,38 +7,32 @@ public class Book {
     private int numOfCopies;
     private int[] rating;
 
-    public Book(int code, String name, String genre, int numOfCopies, int[] rating) {
+    public Book(int code, String name, String genre, int numOfCopies) {
         this.code = code;
         this.name = name;
         this.genre = genre;
         this.numOfCopies = numOfCopies;
-        this.rating = rating;
+        this.rating = new int[5];
     }
 
     public int getCode() {
         return code;
     }
-
     public void setCode(int code) {
         this.code = code;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getGenre() {
         return genre;
     }
-
     public void setGenre(String genre) {
         this.genre = genre;
     }
-
     public int getNumOfCopies() {
         return numOfCopies;
     }
@@ -55,5 +49,14 @@ public class Book {
         this.rating = rating;
     }
 
+    public void updateRating(int rate) {
+        rating[rate++] = rate;
+    }
 
+    public double calcRating() {
+        double sum = 0;
+        for (int i = 0; i < rating.length; i++)
+            sum += rating[i];
+        return sum / rating.length;
+    }
 }
