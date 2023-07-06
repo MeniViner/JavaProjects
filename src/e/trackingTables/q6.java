@@ -9,6 +9,7 @@ public class q6 {
         if (str.charAt(0) == '1') {
             temp = (int) Math.pow(2, str.length()-1);
         }
+
         return torture (str.substring(1), x + temp);
     }
 
